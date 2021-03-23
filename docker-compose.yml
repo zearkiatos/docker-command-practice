@@ -6,6 +6,4 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: command-line-web
-    volumes: 
-      - ".:/home"
     tty: true
