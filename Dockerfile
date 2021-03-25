@@ -13,13 +13,17 @@ ls -l && \
 cd test/ && \
 ls -a && \
 cd .. && \
+touch test.html && \
 cp test.html test/ && \
 cd test && \
 ls && \
 rm test.html && \
 mv ../test.html . && \
 ls ../ && \
-rmdir test.html ../ && \
 cd .. && \
-rmdir test/ && \
-ls -l
+ls -l && \
+cd /home && \
+mkdir development && \
+cd development && \
+mkdir kubernetes && \
+cd kubernetes

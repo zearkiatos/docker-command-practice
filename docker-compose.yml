@@ -7,3 +7,4 @@ services:
       dockerfile: Dockerfile
     container_name: command-line-web
     tty: true
+    command: tail -f /dev/null
