@@ -39,10 +39,22 @@ chmod o-w new.txt && \
 echo echo "Hello world" > hello.bash && \
 chmod -x hello.bash && \
 chmod 760 hello.bash && \
-chown hello.bash
+chown hello.bash && \
+cd data && \
+ls MOCK_DATA.json -l && \
+ls MOCK_DATA.json -lh && \
+gzip MOCK_DATA.json && \
+gzip -d MOCK_DATA.json.gz && \
+tar cf backup.tar backup/* && \
+tar t backup.tar && \
+mv backup.tar Pedro/ && \
+cd Pedro && \
+tar xf backup.tar && \
+tar czf backup.tgz backup/* && \
+mv backup.tgz guzzle/ && \
+tar xzf backup.tgz
 
-RUN yes | apt install lynx && \
-RUN 
+RUN yes | apt install lynx
 
 # kill -9 (process number)
 # killall
