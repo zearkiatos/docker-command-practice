@@ -33,7 +33,14 @@ fg && \
 ps && \
 ps ax && \
 ps ax | grep init && \
-top
+top && \
+touch new.txt && \
+chmod o-w new.txt && \
+echo echo "Hello world" > hello.bash && \
+chmod -x hello.bash && \
+chmod 760 hello.bash && \
+chown hello.bash 
+
 # kill -9 (process number)
 # killall
 
