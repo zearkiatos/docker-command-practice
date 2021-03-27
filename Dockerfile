@@ -39,7 +39,10 @@ chmod o-w new.txt && \
 echo echo "Hello world" > hello.bash && \
 chmod -x hello.bash && \
 chmod 760 hello.bash && \
-chown hello.bash 
+chown hello.bash
+
+RUN yes | apt install lynx && \
+RUN 
 
 # kill -9 (process number)
 # killall
