@@ -28,7 +28,14 @@ cd exampleCode && \
 vim TwitterNotificer.cs && \
 head -n 44 TwitterNotifier.cs > PartialTwitterNotifier.txt && \
 tail -n 44 TwitterNotifier.cs > PartialTwitterNotifier2.txt && \
-date >> PartialTwitterNotifier.txt
+date >> PartialTwitterNotifier.txt && \
+fg && \
+ps && \
+ps ax && \
+ps ax | grep init && \
+top
+# kill -9 (process number)
+# killall
 
 # CMD date && \
 # echo "My Name is Pedro 👨🏻‍💻 🇻🇪" && \
