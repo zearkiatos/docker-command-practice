@@ -52,7 +52,13 @@ cd Pedro && \
 tar xf backup.tar && \
 tar czf backup.tgz backup/* && \
 mv backup.tgz guzzle/ && \
-tar xzf backup.tgz
+tar xzf backup.tgz && \
+locate MOCK_DATA.json && \
+updatedb && \
+whereis echo && \
+find . -user pedro && \
+find . -type f -mtime +7 && \
+find . -type f -mtime +7 -exec cp {} ./backup/ \;
 
 RUN yes | apt install lynx
 
