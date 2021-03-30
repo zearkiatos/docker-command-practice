@@ -97,3 +97,4 @@ RUN yes | apt install lynx
 # cd development && \
 # mkdir kubernetes && \
 # cd kubernetes
+# echo "Hola Mundo!" | mail -s "Testing" TU_EMAIL
