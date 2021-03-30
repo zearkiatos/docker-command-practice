@@ -7,6 +7,8 @@ COPY . .
 RUN apt-get update
 RUN yes | apt-get install vim
 RUN apt-get install nano
+RUN yes | apt install curl
+RUN yes | apt install wget
 
 CMD cat data/MOCK_DATA.json && \
 head data/MOCK_DATA.json && \
@@ -58,7 +60,12 @@ updatedb && \
 whereis echo && \
 find . -user pedro && \
 find . -type f -mtime +7 && \
-find . -type f -mtime +7 -exec cp {} ./backup/ \;
+find . -type f -mtime +7 -exec cp {} ./backup/ && \
+curl https://platzi.com && \
+curl -v https://platzi.com | more && \
+curl -v https://platzi.com > /dev/null && \
+wget https://www.php.net/distributions/php-7.3.10.tar.bz2
+
 
 RUN yes | apt install lynx
 
