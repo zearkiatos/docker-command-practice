@@ -64,7 +64,10 @@ find . -type f -mtime +7 -exec cp {} ./backup/ && \
 curl https://platzi.com && \
 curl -v https://platzi.com | more && \
 curl -v https://platzi.com > /dev/null && \
-wget https://www.php.net/distributions/php-7.3.10.tar.bz2
+wget https://www.php.net/distributions/php-7.3.10.tar.bz2 && \
+echo $PATH && \
+export MY_VAR=Pedro && \
+MY_VAR=/home php env.php
 
 
 RUN yes | apt install lynx
