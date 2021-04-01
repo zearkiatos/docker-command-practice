@@ -72,6 +72,8 @@ MY_VAR=/home php env.php
 
 RUN yes | apt install lynx
 
+ENTRYPOINT [ "./platzi.sh" ]
+
 # kill -9 (process number)
 # killall
 
