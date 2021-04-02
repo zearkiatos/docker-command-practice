@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: command-line-web
+    tty: true
+    command: tail -f /dev/null
+    networks: 
+      - private
+  web-server:
+    image: nginx
+    container_name: nginx-server
+    networks: 
+      - private
+networks: 
+  private:
