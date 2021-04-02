@@ -9,6 +9,8 @@ RUN yes | apt-get install vim
 RUN apt-get install nano
 RUN yes | apt install curl
 RUN yes | apt install wget
+RUN yes | apt install at
+RUN apt install cron
 
 CMD cat data/MOCK_DATA.json && \
 head data/MOCK_DATA.json && \
@@ -67,7 +69,10 @@ curl -v https://platzi.com > /dev/null && \
 wget https://www.php.net/distributions/php-7.3.10.tar.bz2 && \
 echo $PATH && \
 export MY_VAR=Pedro && \
-MY_VAR=/home php env.php
+MY_VAR=/home php env.php && \
+at now +2 minutes && \
+crontab -e
+
 
 
 RUN yes | apt install lynx
